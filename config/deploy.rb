@@ -8,7 +8,7 @@ require 'bundler/capistrano'
 default_run_options[:pty] = false
 ssh_options[:forward_agent] = true
 set :use_sudo, false
-set :user, "dhusername"
+set :user, "titlepool"
 
 set :application, "example.com"
 set :repository,  "git@github.com:claco/example.com.git"
@@ -18,7 +18,7 @@ set :git_shallow_clone, 1
 set :deploy_via, :remote_cache
 set :copy_compression, :bz2
 set :rails_env, 'production'
-set :deploy_to, "/home/dhusername/#{application}"
+set :deploy_to, "/public/titlepool/#{application}"
 
 
 role :web, "#{application}"                          # Your HTTP server, Apache/etc
@@ -35,7 +35,6 @@ namespace :deploy do
   end
 end
 
-end
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
