@@ -18,7 +18,7 @@ set :git_shallow_clone, 1
 set :deploy_via, :remote_cache
 set :copy_compression, :bz2
 set :rails_env, 'production'
-set :deploy_to, "/public/titlepool/#{application}"
+set :deploy_to, "/home/titlepool/www.titlepool.com/example.com/current/public"
 
 
 role :web, "#{application}"                          # Your HTTP server, Apache/etc
